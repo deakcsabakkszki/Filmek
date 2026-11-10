@@ -14,11 +14,37 @@ namespace Filmek
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+    public class Filmadatok
+    {
+        public string Cím { get; set; }
+        public string Műfaj {  get; set; }
+        public int Hossz { get; set; }
+        public double Értékelés { get; set; }
+
+        public Filmadatok(string Cím, string Műfaj, int Hossz, double Értékelés)
+        {
+            this.Cím=Cím;
+            this.Műfaj=Műfaj;
+            this.Hossz=Hossz;
+            this.Értékelés=Értékelés;
+        }
+
+    }
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            List<Filmadatok> filmek = new List<Filmadatok>()
+            {
+            new Filmadatok("Csillagok háborúja", "sci-fi", 121, 8.6),
+            new Filmadatok("Titanic", "dráma", 195, 7.8),
+            new Filmadatok("A Gyűrűk Ura", "fantasy", 201, 8.8),
+            new Filmadatok("Mátrix", "sci-fi", 136, 8.7),
+            new Filmadatok("Shrek", "animáció", 90, 7.9)
+            };
         }
     }
 }
