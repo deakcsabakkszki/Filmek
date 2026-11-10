@@ -91,5 +91,15 @@ namespace Filmek
             datagrid.Items.Refresh();
 
         }
+
+        private void csakcim(object sender, RoutedEventArgs e)
+        {
+            datagrid.ItemsSource = filmek.Select(t => new {Cim  = t.Cím}).ToList();
+        }
+
+        private void cimrendezes(object sender, RoutedEventArgs e)
+        {
+            datagrid.ItemsSource = filmek.OrderBy(f=>f.Cím).ToList();
+        }
     }
 }
