@@ -15,6 +15,9 @@
          <Button Content=" Filmek betöltése" Width="100" Margin="10" Padding="5" Click="betoltes"/>
          <Button Content=" Hány film van" Width="100" Margin="10" Padding="5" Click="hanyfilm"/>
          <Button Content=" Leghosszabb film" Width="100" Margin="10" Padding="5" Click="leghosszabbfilm"/>
+         <Button Content=" Leghosszabb film" Width="100" Margin="10" Padding="5" Click="atlagertekeles"/>
+            <Button Content="Csak sci-fi" Click="csakscifi" Width="100" Margin="10" Padding="5"/>
+
         </StackPanel>
 
             <DataGrid x:Name="datagrid" Grid.Column="1" />

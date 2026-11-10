@@ -64,5 +64,32 @@ namespace Filmek
             var leghosszabb = filmek.OrderByDescending(f => f.Hossz).FirstOrDefault();
             MessageBox.Show($"A leghosszabb film: {leghosszabb.Cím}, {leghosszabb.Hossz} perc");
         }
+
+        private void atlagertekeles(object sender, RoutedEventArgs e)
+        {
+            double osszeg = 0;
+            foreach (var item in filmek)
+            {
+                osszeg += item.Értékelés;
+
+            }
+            double atlag = osszeg / filmek.Count;
+            MessageBox.Show($"A filmek átlag értékelése: {atlag} ");
+        }
+
+        private void csakscifi(object sender, RoutedEventArgs e)
+        {
+           List<Filmadatok> scifi = new List<Filmadatok>();
+            foreach (var item in filmek)
+            {
+                if ( item.Műfaj == "sci-fi")
+                {
+                    scifi.Add(item);
+                }
+            }
+            datagrid.ItemsSource = scifi;
+            datagrid.Items.Refresh();
+
+        }
     }
 }
