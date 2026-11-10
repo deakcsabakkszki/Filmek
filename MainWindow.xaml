@@ -19,10 +19,10 @@
          <Button Content="Csak sci-fi" Click="csakscifi" Width="100" Margin="10" Padding="5"/>
             <Button Content="Csak címek" Click="csakcim" Width="100" Margin="10" Padding="5"/>
             <Button Content="Cím szerint rendezés" Click="cimrendezes" Width="100" Margin="10" Padding="5"/>
-
+            <ProgressBar x:Name="progbar" Width="100" Height="20" Margin="10"/>
         </StackPanel>
 
-            <DataGrid x:Name="datagrid" Grid.Column="1" />
+            <DataGrid x:Name="datagrid" Grid.Column="1" SelectionChanged="selectchange" />
         
 
     </Grid>

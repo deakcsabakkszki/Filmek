@@ -101,5 +101,15 @@ namespace Filmek
         {
             datagrid.ItemsSource = filmek.OrderBy(f=>f.Cím).ToList();
         }
+
+        private void selectchange(object sender, SelectionChangedEventArgs e)
+        {
+            progbar.Maximum = filmek.Max(f => f.Hossz);
+            progbar.Minimum = 0;
+            if (datagrid.SelectedItem != null && datagrid.SelectedItem is Filmadatok)
+            {
+                progbar.Value = ((Filmadatok)datagrid.SelectedItem).Hossz;
+            }
+        }
     }
 }
