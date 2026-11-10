@@ -53,5 +53,10 @@ namespace Filmek
             datagrid.ItemsSource = filmek;
             datagrid.Items.Refresh();
         }
+
+        private void hanyfilm(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"{filmek.Count}db film látható");
+        }
     }
 }

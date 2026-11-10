@@ -12,7 +12,8 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" Orientation="Vertical">
-         <Button Content=" Filmek betöltése" Width="100" Margin="10" Padding="5" Click="betoltes"/>   
+         <Button Content=" Filmek betöltése" Width="100" Margin="10" Padding="5" Click="betoltes"/>
+         <Button Content=" Hány film van" Width="100" Margin="10" Padding="5" Click="hanyfilm"/>
         </StackPanel>
 
             <DataGrid x:Name="datagrid" Grid.Column="1" />
